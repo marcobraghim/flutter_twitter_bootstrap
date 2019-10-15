@@ -1,4 +1,4 @@
-library ftbootstrap;
+library fbootstrap;
 
 /// A Calculator.
 class MyCounter {
