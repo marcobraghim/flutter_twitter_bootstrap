@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BootstrapButton extends StatefulWidget {
-  VoidCallback onPressed;
-  Text text;
-  Color color;
+
+  final VoidCallback onPressed;
+  final Text text;
+  final Color color;
 
   BootstrapButton({this.onPressed, this.text, this.color});
 

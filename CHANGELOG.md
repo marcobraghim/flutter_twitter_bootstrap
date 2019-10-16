@@ -5,3 +5,7 @@
 ## [1.0.1-dev.1] - 2019-10-16
 
 * Minimal details
+
+## [1.0.1-dev.2] - 2019-10-16
+
+* Minimal details
