@@ -29,4 +29,6 @@ https://getbootstrap.com/docs/4.3/components/alerts/
 
 ## Names pattern
 
+> Os nomes devem ser sempre no singular, ou seja, em vez de *Alerts* o correto é *Alert*
+
 Adotemos um namespace para o nome de todos os components para evitar nomes duplicados de outros pacotes, por exemplo, em vez de apenas **Button** o correto deve ser **FbootstrapButton**. 

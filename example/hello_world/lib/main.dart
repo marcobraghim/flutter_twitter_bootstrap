@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ftbootstrap/ftbootstrap.dart';
+import 'package:flutter_twitter_bootstrap/ftbootstrap.dart';
 
 void main() => runApp(MyApp());
 

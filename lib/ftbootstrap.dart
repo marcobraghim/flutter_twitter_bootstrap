@@ -1,6 +1,8 @@
-library fbootstrap;
-export 'buttons/ftbootstrap_buttons.dart';
-export 'buttons/ftcolors.dart';
+library flutter_twitter_bootstrap;
+
+export 'components/button/button.dart';
+export 'components/button/ftcolors.dart';
+
 /// A Calculator.
 class MyCounter {
   int theVal = 0;

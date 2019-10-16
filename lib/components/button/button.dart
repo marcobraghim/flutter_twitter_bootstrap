@@ -1,5 +1,3 @@
-library fbootstrap;
-
 import 'package:flutter/material.dart';
 
 import 'ftcolors.dart';
