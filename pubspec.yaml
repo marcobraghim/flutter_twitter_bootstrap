@@ -1,6 +1,9 @@
 name: flutter_twitter_bootstrap
-description: A Twitter Bootstrap Design for Flutter Web
-version: 1.0.1-dev
+description: A Twitter Bootstrap Design for Flutter Web.
+  With this package you must be able to create Bootstrap themes also
+  develop a custom design theme as simple setting your own modifications
+  by predefined variables. Build beautyful layout themes.
+version: 1.0.1-dev.1
 authors:
   - Marco A. Braghim <marco.a.braghim@gmail.com>
   - Bruno Qualhato <brunoqualhato1@gmail.com>

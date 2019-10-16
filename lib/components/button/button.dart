@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'ftcolors.dart';
-
-class FTBootStrapButton extends StatefulWidget {
+class BootstrapButton extends StatefulWidget {
   VoidCallback onPressed;
   Text text;
   Color color;
 
-  FTBootStrapButton({this.onPressed, this.text, this.color});
+  BootstrapButton({this.onPressed, this.text, this.color});
 
   _PrimaryButtonState createState() => _PrimaryButtonState();
 }
 
-class _PrimaryButtonState extends State<FTBootStrapButton> {
+class _PrimaryButtonState extends State<BootstrapButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
