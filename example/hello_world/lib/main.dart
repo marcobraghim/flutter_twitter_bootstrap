@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            BootstrapBadge(child: Text('Oloquinho meu')),
             Text(
               'You have pushed the button this many times:',
             ),
