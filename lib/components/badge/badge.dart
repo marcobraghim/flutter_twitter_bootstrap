@@ -12,8 +12,6 @@ class Badge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    print(Theme.of(context).fontSize);
-
     List<String> classes = this.classes.trim().split(" ");
 
     Color color = Colors.primary;
@@ -43,7 +41,11 @@ class Badge extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.fromLTRB(6, 2, 6, 2),
-      child: Text(this.text, style: TextStyle(color: Colors.light)),
+      child: Text(this.text, style: TextStyle(
+        color: Colors.light,
+        fontSize: Theme.of(context).fontSize.toDouble(),
+        fontFamily: Theme.of(context).fontFamily
+      )),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.all(

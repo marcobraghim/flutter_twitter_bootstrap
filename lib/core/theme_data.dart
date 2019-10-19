@@ -46,6 +46,21 @@ class ThemeData extends Diagnosticable
 
   factory ThemeData.fallback() => ThemeData();
 
+  static ThemeData lerp(ThemeData a, ThemeData b, double t) {
+    assert(a != null);
+    assert(b != null);
+    assert(t != null);
+    // Warning: make sure these properties are in the exact same order as in
+    // hashValues() and in the raw constructor and in the order of fields in
+    // the class and in the lerp() method.
+    return ThemeData.raw(
+      fontSize: a.fontSize+((a.fontSize - b.fontSize)/2).round(),
+      fontFamily: a.fontFamily,
+      color: Color.lerp(a.color, b.color, t),
+      backgroundColor: Color.lerp(a.backgroundColor, b.backgroundColor, t)
+    );
+  }
+
   ThemeData copyWith({
     int fontSize,
     String fontFamily,
