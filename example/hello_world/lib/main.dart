@@ -27,40 +27,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  MyCounter counter = MyCounter();
+
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
-      counter.addOne();
+      _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text(widget.title),
+    //   ),
+    //   body: Center(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       children: <Widget>[
+    //         BootstrapBadge(child: Text('Oloquinho meu')),
+    //         Text('You have pushed the button this many times:'),
+    //         Text(
+    //           this.counter.value.toString(),
+    //           style: Theme.of(context).textTheme.display1,
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    //   floatingActionButton: FloatingActionButton(
+    //     onPressed: _incrementCounter,
+    //     tooltip: 'Increment',
+    //     child: Icon(Icons.add),
+    //   ),
+    // );
+
+    return BootstrapScaffold(body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text('You have pushed the button this many times:'),
+          BootstrapBadge(_counter.toString(), classes: "badge-dark text-light"),
+          BootstrapButton(
+            onPressed: _incrementCounter,
+            text: Text('Me aperte'),
+            color: BootstrapColor.success
+          )
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            BootstrapBadge(child: Text('Oloquinho meu')),
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              this.counter.value.toString(),
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
-    );
+    ));
   }
 }
