@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_twitter_bootstrap/ftbootstrap.dart';
 
 void main() => runApp(MyApp());
@@ -6,11 +6,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return BootstrapApp(
+      themeData: ThemeData(
+        fontSize: 22
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -67,11 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text('You have pushed the button this many times:'),
-          BootstrapBadge(_counter.toString(), classes: "badge-dark text-light"),
+          Badge(_counter.toString(), classes: "badge-dark text-light"),
           BootstrapButton(
             onPressed: _incrementCounter,
             text: Text('Me aperte'),
-            color: BootstrapColor.success
+            color: Colors.success
           )
         ],
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_twitter_bootstrap/ftbootstrap.dart';
+import 'package:flutter_twitter_bootstrap/core/color.dart';
 
 class BootstrapScaffold extends StatefulWidget {
 
@@ -22,7 +22,7 @@ class BootstrapScaffoldState extends State<BootstrapScaffold> with TickerProvide
       child: DefaultTextStyle(
         style: TextStyle(
           fontFamily: 'Noto Sans',
-          color: BootstrapColor.dark,
+          color: Colors.dark,
           fontSize: 16,
         ),
         child: this.widget.body,

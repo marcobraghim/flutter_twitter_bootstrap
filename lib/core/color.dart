@@ -1,7 +1,7 @@
 import 'dart:ui' show Color;
 
-class BootstrapColor {
-  BootstrapColor._();
+class Colors {
+  Colors._();
 
   static const Color transparent = Color(0x00000000);
   static const Color black = Color(0xFF000000);

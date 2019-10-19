@@ -1,39 +1,41 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../color.dart';
+import 'package:flutter_twitter_bootstrap/core/color.dart';
+import 'package:flutter_twitter_bootstrap/ftbootstrap.dart';
 
-class BootstrapBadge extends StatelessWidget {
+class Badge extends StatelessWidget {
 
   final String text;
   final String classes;
   
-  BootstrapBadge(this.text, { this.classes });
+  Badge(this.text, { this.classes });
 
   @override
   Widget build(BuildContext context) {
 
+    print(Theme.of(context).fontSize);
+
     List<String> classes = this.classes.trim().split(" ");
 
-    Color color = BootstrapColor.primary;
+    Color color = Colors.primary;
 
     for (String aClass in classes) {
       if (aClass.startsWith('badge')) {
         String colorType = aClass.replaceFirst('badge-', '');
         switch (colorType) {
           case 'warning':
-            color = BootstrapColor.warning;
+            color = Colors.warning;
             break;
           case 'danger':
-            color = BootstrapColor.danger;
+            color = Colors.danger;
             break;
           case 'success':
-            color = BootstrapColor.success;
+            color = Colors.success;
             break;
           case 'light':
-            color = BootstrapColor.light;
+            color = Colors.light;
             break;
           case 'dark':
-            color = BootstrapColor.dark;
+            color = Colors.dark;
             break;
         }
       }
@@ -41,7 +43,7 @@ class BootstrapBadge extends StatelessWidget {
 
     return Container(
       padding: EdgeInsets.fromLTRB(6, 2, 6, 2),
-      child: Text(this.text, style: TextStyle(color: BootstrapColor.light)),
+      child: Text(this.text, style: TextStyle(color: Colors.light)),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.all(
